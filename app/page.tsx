@@ -1,7 +1,13 @@
+"use client";
+
+import { useRouter } from "next/navigation";
 import Image from "next/image";
+
 import { Button } from "@/components/ui/button";
 
 export default function Home() {
+  const router = useRouter();
+
   return (
     <main className="flex min-h-screen flex-col items-center mt-[5vh] justify-around">
       <div className=" flex items-center justify-center w-80 h-80 bg-backgroundSecondary rounded-full">
@@ -29,6 +35,7 @@ export default function Home() {
         <Button
           variant="outline"
           className="font-poppins bg-backgroundThird border-black	text-2xl font-bold h-24 w-80 rounded-2xl"
+          onClick={() => router.push("/nom-de-chat-en/a")}
         >
           ALLONS-Y
         </Button>
