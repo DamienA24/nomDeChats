@@ -5,27 +5,18 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-const cats = [
-  {
-    name: "Ao",
-    sign: "Symbole de force et protection",
-    characteristics: "Courageux, protecteur",
-    origin: "Anglo-Saxon",
-  },
-  {
-    name: "Arlo",
-    sign: "Symbole de force et protection",
-    characteristics: "Courageux, protecteur",
-    origin: "Anglo-Saxon",
-  },
-  {
-    name: "Ange",
-    sign: "Symbole de force et protection",
-    characteristics: "Courageux, protecteur",
-    origin: "Anglo-Saxon",
-  },
-];
-export function ListCatsNames() {
+type Cat = {
+  name: string;
+  sign: string;
+  characteristics: string;
+  origin: string;
+};
+
+type ListCatsNamesProps = {
+  cats: Cat[];
+};
+
+export function ListCatsNames({ cats }: ListCatsNamesProps) {
   return (
     <Accordion type="single" collapsible defaultValue={cats[0].name}>
       {cats.map((cat, index) => {
@@ -33,11 +24,11 @@ export function ListCatsNames() {
           index % 2 === 0 ? "bg-backgroundBlack/70" : "bg-backgroundThird/70"
         }`;
         const fontColor = `${index % 2 === 0 ? "text-white" : "text-black"}`;
-        const textClass = `font-lora ${fontColor} text-base`;
+        const textClass = `font-lora ${fontColor} text-base font-semibold`;
         return (
           <AccordionItem
             value={cat.name}
-            className={`border-none mt-3 ${backgroundColor}`}
+            className={`border-none mt-3 ${backgroundColor} pl-4`}
             key={`${cat}-${index}`}
           >
             <AccordionTrigger
