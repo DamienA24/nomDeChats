@@ -1,5 +1,7 @@
 import { Inter, Poppins, Lora } from "next/font/google";
+
 import type { Metadata } from "next";
+import Head from "next/head";
 
 import { cn } from "@/lib/utils";
 
@@ -23,8 +25,10 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
+  other: {
+    "google-site-verification": "erEPvpr7Cim_98A-fy0LJ23sJVBxBR7g5Jl8C4i1_1w",
+  },
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{
