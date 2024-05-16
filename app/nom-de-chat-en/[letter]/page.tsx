@@ -1,7 +1,6 @@
-import type { Metadata, ResolvingMetadata } from "next";
+import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 import Image from "next/image";
-import Head from "next/head";
 
 import { ListCatsNames } from "@/components/ListCatsNames";
 import { ListAlphabet } from "@/components/ListAlphabet";
@@ -55,7 +54,14 @@ export default function NameCat({ params }: Props) {
       style={{ backgroundImage: `url(${backgroundImg})` }}
     >
       <div className="mt-3 ml-3">
-        <Image src={"/pawLogo.svg"} width={60} height={60} alt="image a cat" />
+        <a href="/">
+          <Image
+            src={"/pawLogo.svg"}
+            width={60}
+            height={60}
+            alt="image a cat"
+          />
+        </a>
       </div>
       <nav className="static">
         <h1 className="font-poppins font-bold text-2xl pl-4 pt-4 ">
