@@ -22,7 +22,7 @@ export function ListAlphabet({ letterSelected }: { letterSelected: string }) {
         });
       }
     }
-  }, []);
+  }, [letterSelected]);
 
   return (
     <ScrollArea className="w-100 whitespace-nowrap">

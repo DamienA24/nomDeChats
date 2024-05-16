@@ -10,7 +10,7 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center mt-[5vh] justify-around">
-      <div className=" flex items-center justify-center w-80 h-80 bg-backgroundSecondary rounded-full">
+      <div className="flex items-center justify-center w-80 h-80 bg-backgroundSecondary rounded-full">
         <Image
           src={"/catHome.svg"}
           width={240}
@@ -28,13 +28,13 @@ export default function Home() {
         </h2>
 
         <p className="font-lora font-medium text-base	text-center mt-6 w-4/5 mx-auto">
-          Découvrez l'application ultime pour trouver le nom parfait pour votre
-          chat ! Que vous cherchiez un nom pour votre chat commençant par une
-          lettre spécifique, notre application vous offre une vaste sélection de
-          noms de chat classés par lettre de l'alphabet. Chaque nom est
-          accompagné de sa signification, de ses caractéristiques et de son
-          origine. Que vous souhaitiez un nom audacieux, élégant ou unique,
-          trouvez le nom idéal pour votre chat.
+          Découvrez l&apos;application ultime pour trouver le nom parfait pour
+          votre chat ! Que vous cherchiez un nom pour votre chat commençant par
+          une lettre spécifique, notre application vous offre une vaste
+          sélection de noms de chat classés par lettre de l&apos;alphabet.
+          Chaque nom est accompagné de sa signification, de ses caractéristiques
+          et de son origine. Que vous souhaitiez un nom audacieux, élégant ou
+          unique, trouvez le nom idéal pour votre chat.
         </p>
       </div>
       <div className="container-button">
