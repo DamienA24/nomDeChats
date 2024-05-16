@@ -3025,12 +3025,6 @@ export const CATSDATA: CatData = {
         origin: "Français",
       },
       {
-        name: "Yara",
-        sign: "Petite papillon",
-        characteristics: "Légère, gracieuse",
-        origin: "Arabe",
-      },
-      {
         name: "Yuri",
         sign: "Lys",
         characteristics: "Pur, noble",
@@ -3083,12 +3077,6 @@ export const CATSDATA: CatData = {
         sign: "Dieu est gracieux",
         characteristics: "Dévoué, joyeux",
         origin: "Grec",
-      },
-      {
-        name: "Yves",
-        sign: "If",
-        characteristics: "Fort, noble",
-        origin: "Français",
       },
       {
         name: "Yuki",
