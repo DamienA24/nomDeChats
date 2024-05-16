@@ -20,6 +20,9 @@ export const metadata: Metadata = {
   description:
     "Découvrez l'application ultime pour trouver le nom parfait pour votre chat ! Explorez des centaines de noms classés par lettre de l'alphabet, chacun accompagné de sa signification, ses caractéristiques et son origine. Que vous cherchiez un nom audacieux, élégant ou unique, notre application vous aide à choisir le meilleur nom pour votre félin.",
   applicationName: "NomPourChat",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
