@@ -19,7 +19,7 @@ export default function Home() {
         />
       </div>
       <div className="container-titles">
-        <div className="flex">
+        <div className="flex justify-center">
           <h1 className="font-poppins text-4xl font-bold">Nom Pour Chat</h1>
           <Image src={"/paw.svg"} height={32} width={32} alt="image of paw" />
         </div>
@@ -27,8 +27,14 @@ export default function Home() {
           Trouvons le nom de votre chat
         </h2>
 
-        <p className="font-lora font-medium text-base	text-center mt-6">
-          Arlo, Bob, Freud, Beach
+        <p className="font-lora font-medium text-base	text-center mt-6 w-4/5 mx-auto">
+          Découvrez l'application ultime pour trouver le nom parfait pour votre
+          chat ! Que vous cherchiez un nom pour votre chat commençant par une
+          lettre spécifique, notre application vous offre une vaste sélection de
+          noms de chat classés par lettre de l'alphabet. Chaque nom est
+          accompagné de sa signification, de ses caractéristiques et de son
+          origine. Que vous souhaitiez un nom audacieux, élégant ou unique,
+          trouvez le nom idéal pour votre chat.
         </p>
       </div>
       <div className="container-button">
