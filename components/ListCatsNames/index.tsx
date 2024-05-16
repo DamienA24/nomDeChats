@@ -20,15 +20,13 @@ export function ListCatsNames({ cats }: ListCatsNamesProps) {
   return (
     <Accordion type="single" collapsible defaultValue={cats[0].name}>
       {cats.map((cat, index) => {
-        const backgroundColor = `${
-          index % 2 === 0 ? "bg-backgroundBlack/70" : "bg-backgroundThird/70"
-        }`;
-        const fontColor = `${index % 2 === 0 ? "text-white" : "text-black"}`;
+        const fontColor = `"text-black`;
         const textClass = `font-lora ${fontColor} text-base font-semibold`;
+
         return (
           <AccordionItem
             value={cat.name}
-            className={`border-none mt-3 ${backgroundColor} pl-4`}
+            className={`border-none mt-4 bg-backgroundThird/70 pl-4`}
             key={`${cat}-${index}`}
           >
             <AccordionTrigger
