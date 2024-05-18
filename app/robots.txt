@@ -2,4 +2,4 @@ User-Agent: *
 Allow: /
 Disallow: /private/
 
-Sitemap: https://nompourchat.com/sitemap.xml
+Sitemap: https://www.nompourchat.com/sitemap.xml

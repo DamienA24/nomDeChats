@@ -19,7 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const routes = ALPHABET.reduce(
     (acc: Route[], letter) => {
       const route: Route = {
-        url: `https://nompourchat.com/nom-de-chat-en/${letter}`,
+        url: `https://www.nompourchat.com/nom-de-chat-en/${letter}`,
         lastModified: new Date(),
         changeFrequency: "daily",
       };
@@ -30,7 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     [
       {
-        url: `https://nompourchat.com/`,
+        url: `https://www.nompourchat.com/`,
         lastModified: new Date(),
         changeFrequency: "daily",
       },
