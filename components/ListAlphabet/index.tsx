@@ -36,7 +36,7 @@ export function ListAlphabet({ letterSelected }: { letterSelected: string }) {
             <figure
               key={letter}
               id={letter}
-              className={`flex justify-center items-center shrink-0 w-14 h-12 ${backgroundClass} rounded-3xl`}
+              className={`flex justify-center items-center shrink-0 w-14 h-12 ${backgroundClass} rounded-3xl cursor-pointer`}
               onClick={() => router.push(`/nom-de-chat-en/${letter}`)}
             >
               <span className={"font-poppins font-bold text-xl"}>

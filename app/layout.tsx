@@ -1,7 +1,6 @@
 import { Inter, Poppins, Lora } from "next/font/google";
 
 import type { Metadata } from "next";
-import Head from "next/head";
 
 import { cn } from "@/lib/utils";
 
@@ -16,14 +15,25 @@ const poppins = Poppins({
   variable: "--font-poppins",
 });
 const lora = Lora({ subsets: ["latin"], variable: "--font-lora" });
+const title = "Nom de chat";
+const description =
+  "Découvrez l'application ultime pour trouver le nom parfait pour votre chat ! Explorez des centaines de noms classés par lettre de l'alphabet, chacun accompagné de sa signification, ses caractéristiques et son origine. Que vous cherchiez un nom audacieux, élégant ou unique, notre application vous aide à choisir le meilleur nom pour votre félin.";
 
 export const metadata: Metadata = {
-  title: "Nom de chat",
-  description:
-    "Découvrez l'application ultime pour trouver le nom parfait pour votre chat ! Explorez des centaines de noms classés par lettre de l'alphabet, chacun accompagné de sa signification, ses caractéristiques et son origine. Que vous cherchiez un nom audacieux, élégant ou unique, notre application vous aide à choisir le meilleur nom pour votre félin.",
+  title,
+  description,
   applicationName: "NomPourChat",
   icons: {
     icon: "/favicon.ico",
+  },
+  openGraph: {
+    title,
+    description,
+    url: `https://www.nompourchat.com/`,
+    siteName: "NomPourChat",
+    images: `https://www.nompourchat.com/catHome.svg`,
+    locale: "fr_FR",
+    type: "website",
   },
 };
 export default function RootLayout({

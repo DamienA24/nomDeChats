@@ -26,11 +26,25 @@ export async function generateMetadata({
 }: PropsMeta): Promise<Metadata> {
   // read route params
   const letter = params.letter;
+  const title = `Nom de chat en ${letter.toUpperCase()} - Les meilleurs noms pour votre
+          chat`;
+  const description = `Découvrez les meilleurs noms de chat en ${letter.toUpperCase()}`;
+  const catsForLetter = CATSDATA[letter as keyof typeof CATSDATA];
+  const backgroundImg = catsForLetter.background;
 
   return {
-    title: `Nom de chat en ${letter.toUpperCase()} - Les meilleurs noms pour votre
-          chat`,
-    description: `Découvrez les meilleurs noms de chat en ${letter.toUpperCase()}`,
+    title,
+    description,
+    keywords: [`Nom de chat en ${letter.toUpperCase()}`],
+    openGraph: {
+      title,
+      description,
+      url: `https://www.nompourchat.com/nom-de-chat-en/${letter.toLowerCase()}`,
+      siteName: "NomPourChat",
+      images: `https://www.nompourchat.com${backgroundImg}`,
+      locale: "fr_FR",
+      type: "website",
+    },
   };
 }
 
