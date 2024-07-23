@@ -1,6 +1,7 @@
 import { Inter, Poppins, Lora } from "next/font/google";
 
 import type { Metadata } from "next";
+import Script from "next/script";
 
 import { cn } from "@/lib/utils";
 
@@ -52,6 +53,12 @@ export default function RootLayout({
       >
         {children}
         <Footer />
+        {process.env.NODE_ENV === "production" && (
+          <Script
+            src="https://cloud.umami.is/script.js"
+            data-website-id="cde66984-f532-4760-923f-cb08970c58d9"
+          />
+        )}
       </body>
     </html>
   );
