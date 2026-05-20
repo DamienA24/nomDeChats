@@ -57,8 +57,10 @@ export default async function NameCat({ params }: Props) {
   const seoContent = SEO_CONTENT[letter];
 
   const letterIndex = ALPHABET.indexOf(letter.toLowerCase());
-  const prevLetter = letterIndex > 0 ? ALPHABET[letterIndex - 1] : ALPHABET[ALPHABET.length - 1];
-  const nextLetter = letterIndex < ALPHABET.length - 1 ? ALPHABET[letterIndex + 1] : ALPHABET[0];
+  const prevLetter =
+    letterIndex > 0 ? ALPHABET[letterIndex - 1] : ALPHABET[ALPHABET.length - 1];
+  const nextLetter =
+    letterIndex < ALPHABET.length - 1 ? ALPHABET[letterIndex + 1] : ALPHABET[0];
 
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
@@ -147,8 +149,8 @@ export default async function NameCat({ params }: Props) {
         <ListAlphabet letterSelected={letter} />
       </nav>
       <div>
-        <CatResume descriptionLetter={description} />
-
+        {/*        <CatResume descriptionLetter={description} />
+         */}
         <div className="mt-6 px-2">
           <h2 className="font-poppins font-bold text-xl pl-2 mb-2">
             Les {catsForLetter.names.length} noms de chat en{" "}
