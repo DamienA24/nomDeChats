@@ -1,12 +1,10 @@
 "use client";
 import { useEffect, useRef } from "react";
-import { useRouter } from "next/navigation";
 
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { ALPHABET } from "@/constants";
 
 export function ListAlphabet({ letterSelected }: { letterSelected: string }) {
-  const router = useRouter();
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -33,16 +31,16 @@ export function ListAlphabet({ letterSelected }: { letterSelected: string }) {
             ? "bg-backgroundSecondary"
             : "bg-backgroundThird";
           return (
-            <figure
+            <a
               key={letter}
               id={letter}
-              className={`flex justify-center items-center shrink-0 w-14 h-12 ${backgroundClass} rounded-3xl cursor-pointer`}
-              onClick={() => router.push(`/nom-de-chat-en/${letter}`)}
+              href={`/nom-de-chat-en/${letter}`}
+              className={`flex justify-center items-center shrink-0 w-14 h-12 ${backgroundClass} rounded-3xl`}
             >
-              <span className={"font-poppins font-bold text-xl"}>
+              <span className="font-poppins font-bold text-xl">
                 {letter.toLocaleUpperCase()}
               </span>
-            </figure>
+            </a>
           );
         })}
       </div>

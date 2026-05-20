@@ -1,13 +1,10 @@
-"use client";
-
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
+import { ALPHABET } from "@/constants";
 
 export default function Home() {
-  const router = useRouter();
-
   return (
     <main className="flex min-h-screen flex-col items-center mt-[5vh] justify-around">
       <div className="flex items-center justify-center w-80 h-80 bg-backgroundSecondary rounded-full">
@@ -23,11 +20,11 @@ export default function Home() {
           <h1 className="font-poppins text-4xl font-bold">Nom Pour Chat</h1>
           <Image src={"/paw.svg"} height={32} width={32} alt="image of paw" />
         </div>
-        <h2 className="font-poppins font-medium text-base	text-center">
+        <h2 className="font-poppins font-medium text-base text-center">
           Trouvons le nom de votre chat
         </h2>
 
-        <p className="font-lora font-medium text-base	text-center mt-6 w-4/5 mx-auto">
+        <p className="font-lora font-medium text-base text-center mt-6 w-4/5 mx-auto">
           Découvrez l&apos;application ultime pour trouver le nom parfait pour
           votre chat ! Que vous cherchiez un nom pour votre chat commençant par
           une lettre spécifique, notre application vous offre une vaste
@@ -37,13 +34,31 @@ export default function Home() {
           unique, trouvez le nom idéal pour votre chat.
         </p>
       </div>
+
+      <nav aria-label="Noms de chat par lettre">
+        <p className="font-poppins font-semibold text-center mb-4">
+          Choisir une lettre
+        </p>
+        <div className="flex flex-wrap justify-center gap-3 px-4">
+          {ALPHABET.map((letter) => (
+            <Link
+              key={letter}
+              href={`/nom-de-chat-en/${letter}`}
+              className="flex justify-center items-center w-14 h-12 bg-backgroundThird rounded-3xl font-poppins font-bold text-xl hover:bg-backgroundSecondary transition-colors"
+            >
+              {letter.toUpperCase()}
+            </Link>
+          ))}
+        </div>
+      </nav>
+
       <div className="container-button">
         <Button
+          asChild
           variant="outline"
-          className="font-poppins bg-backgroundThird border-black	text-2xl font-bold h-24 w-80 rounded-2xl"
-          onClick={() => router.push("/nom-de-chat-en/a")}
+          className="font-poppins bg-backgroundThird border-black text-2xl font-bold h-24 w-80 rounded-2xl"
         >
-          ALLONS-Y
+          <Link href="/nom-de-chat-en/a">ALLONS-Y</Link>
         </Button>
       </div>
     </main>

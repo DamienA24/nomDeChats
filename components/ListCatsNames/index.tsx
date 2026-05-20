@@ -17,8 +17,9 @@ type ListCatsNamesProps = {
 };
 
 export function ListCatsNames({ cats }: ListCatsNamesProps) {
+  const defaultOpen = cats.slice(0, 5).map((c) => c.name);
   return (
-    <Accordion type="single" collapsible defaultValue={cats[0].name}>
+    <Accordion type="multiple" defaultValue={defaultOpen}>
       {cats.map((cat, index) => {
         const fontColor = `"text-black`;
         const textClass = `font-lora ${fontColor} text-base font-semibold`;
